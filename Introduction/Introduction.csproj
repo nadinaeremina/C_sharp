@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{05F31486-3E98-4DA6-92AF-FFD34DA6369C}</ProjectGuid>
+    <ProjectGuid>{3254A3BA-BC83-4626-AC83-C03B5906BEDE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>C_sharp</RootNamespace>
-    <AssemblyName>C_sharp</AssemblyName>
+    <RootNamespace>Introduction</RootNamespace>
+    <AssemblyName>Introduction</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
