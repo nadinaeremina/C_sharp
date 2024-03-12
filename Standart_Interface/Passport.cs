@@ -8,8 +8,8 @@ namespace Standart_Interface
 {
     class Passport
     {
-        public int Number { get; set; }
         public string Series { get; set; }
+        public int Number { get; set; }
         public override string ToString()
         {
             return $"{Series,5} {Number,8}";

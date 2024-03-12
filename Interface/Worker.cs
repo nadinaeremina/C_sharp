@@ -9,7 +9,6 @@ namespace Interface
     class Worker : Employee
     {
         public string Post { get; set; }
-
         public override string ToString()
         {
             return base.ToString() + $" {Post}";

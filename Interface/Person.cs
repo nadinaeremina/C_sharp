@@ -14,7 +14,7 @@ namespace Interface
    
         public override string ToString()
         {
-            return $"{FirstName} {LastName} {BD}";
+            return $"{FirstName} {LastName} {BD.ToShortDateString()} ";
         }
     }
     abstract class Learning: Person
@@ -23,7 +23,7 @@ namespace Interface
         public int Year_st { get; set; }
         public override string ToString()
         {
-            return base.ToString() + $"{Education} {Year_st} {BD}";
+            return base.ToString() + $"{Education} {Year_st} ";
         }
     }
     class Employee: Person, IEmployees
@@ -31,7 +31,6 @@ namespace Interface
         public string Position { get; set; }
         public int Salary { get; set; }
         public List<Employee> ListEmpl { get ; set ; }
-
         public virtual void Report()
         {
             Console.WriteLine("++++++++++++++++");
@@ -46,12 +45,12 @@ namespace Interface
         }
         public override string ToString()
         {
-            return base.ToString() + $"{Position} {Salary} {BD}";
+            return base.ToString() + $"{Position} {Salary}";
         }
     }
     interface IStudu
     {
-        bool IsStudy { get; }
+        bool IsStudy { get; } // св-во только обьявили
         void Study();
     }
     interface IEmployees

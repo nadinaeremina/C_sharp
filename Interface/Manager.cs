@@ -9,7 +9,6 @@ namespace Interface
     class Manager : Employee
     {
         public string FieldActivity { get; set; }
- 
         public override string ToString()
         {
             return base.ToString() + $" {FieldActivity}";

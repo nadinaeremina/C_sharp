@@ -9,23 +9,21 @@ namespace Interface
     class Student : Learning, IStudu
     {
         public string Group { get; set; }
-
-        public bool isStudy = true;
-
-        public bool IsStudy
+        public bool isStudy = true; // описываем св-во
+        public bool IsStudy // описываем св-во
         {
             get
             {
                 return isStudy;
             }
         }
-        public override string ToString()
-        {
-            return base.ToString() + $" {Group}";
-        }
         public void Study()
         {
             Console.WriteLine("Студент учится");
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $" {Group}";
         }
     }
 }
