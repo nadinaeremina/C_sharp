@@ -265,21 +265,16 @@ namespace ConsoleApp1
 
             // 3
 
-            byte b = 100;
-            WriteLine(unchecked((byte)(b + 200))); // b = 44
-            try
-            {
-                WriteLine(checked((byte)(b + 200))); // генерация иск-ия
-            }
-            catch (OverflowException oe)
-            {
-                WriteLine(oe.Message);
-            }
-
-            // GC: 'Collect' - принудит.вызов сборщика усора
-            // об-ты без ссылок (только если места не хватает)
-            // 0,1,2 поколения (те, кот. не исп-ся в 0 он удаляет, ост. перекидывает в 1 поколение)
-            // если все уровни заняты - переполнение памяти (ошибка)
+            //byte b = 100;
+            //WriteLine(unchecked((byte)(b + 200))); // b = 44
+            //try
+            //{
+            //    WriteLine(checked((byte)(b + 200))); // генерация иск-ия
+            //}
+            //catch (OverflowException oe)
+            //{
+            //    WriteLine(oe.Message);
+            //}
         }
     }
 }
