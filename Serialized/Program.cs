@@ -174,58 +174,58 @@ namespace Serialized
             // 2 // массив студентов
 
             // создаем массив студентов
-            //List<Student> students = new List<Student>()
-            //{
-            //    new Student
-            //    {
-            //    FirstName = "FN1",
-            //    LastName = "LN1",
-            //    BD = new DateTime(2020, 01, 01),
-            //    Rating = 10.5
-            //    },
-            //     new Student
-            //    {
-            //    FirstName = "FN2",
-            //    LastName = "LN2",
-            //    BD = new DateTime(2021, 05, 03),
-            //    Rating = 7.5
-            //    },
-            //      new Student
-            //    {
-            //    FirstName = "FN3",
-            //    LastName = "LN3",
-            //    BD = new DateTime(2022, 04, 01),
-            //    Rating = 6.5
-            //    },
-            //};
+            List<Student> students = new List<Student>()
+            {
+                new Student
+                {
+                FirstName = "FN1",
+                LastName = "LN1",
+                BD = new DateTime(2020, 01, 01),
+                Rating = 10.5
+                },
+                 new Student
+                {
+                FirstName = "FN2",
+                LastName = "LN2",
+                BD = new DateTime(2021, 05, 03),
+                Rating = 7.5
+                },
+                  new Student
+                {
+                FirstName = "FN3",
+                LastName = "LN3",
+                BD = new DateTime(2022, 04, 01),
+                Rating = 6.5
+                },
+            };
 
-            //XmlSerializer xs = new XmlSerializer(typeof(List<Student>)); // передавая обьект - указываем его тип
+            XmlSerializer xs = new XmlSerializer(typeof(List<Student>)); // передавая обьект - указываем его тип
 
-            //try
-            //{
-            //    using (Stream fs = File.Create("test_4.xml"))
-            //    {
-            //        xs.Serialize(fs, students); // принимает поток и обьект
-            //        Console.WriteLine(students);
-            //    }
+            try
+            {
+                using (Stream fs = File.Create("test_4.xml"))
+                {
+                    xs.Serialize(fs, students); // принимает поток и обьект
+                    Console.WriteLine(students);
+                }
 
-            //    Console.WriteLine("_____________________________________________________________________________________");
+                Console.WriteLine("_____________________________________________________________________________________");
 
-            //    using (Stream fs = File.OpenRead("test_4.xml")) // открываем и читаем
-            //    {
-            //        // десериализация // считываем обратно
-            //        // выделяем память
-            //        List<Student> tmp = null; // создаем область памяти
-            //        tmp = (List<Student>)xs.Deserialize(fs); // т.к. мы работаем с 'Object', нам нужно привести к типу 'Student'
+                using (Stream fs = File.OpenRead("test_4.xml")) // открываем и читаем
+                {
+                    // десериализация // считываем обратно
+                    // выделяем память
+                    List<Student> tmp = null; // создаем область памяти
+                    tmp = (List<Student>)xs.Deserialize(fs); // т.к. мы работаем с 'Object', нам нужно привести к типу 'Student'
 
-            //        foreach (Student item in tmp)
-            //            Console.WriteLine(item);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex.Message);
-            //}
+                    foreach (Student item in tmp)
+                        Console.WriteLine(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             ////////////////// 4 // Json 
             // 4.1 RAM
